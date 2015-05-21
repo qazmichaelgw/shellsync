@@ -36,7 +36,7 @@
 # Copyright 2015 Your name here, unless otherwise noted.
 #
 class shellsync {
-    file {"/tmp/shells/":
+    file {"/tmp/shells/test.sh":
 	source  => "puppet:///environments/${environment}/modules/shellsync/shells/test.sh",
 	owner   => "root",
 	group	=> "root",
