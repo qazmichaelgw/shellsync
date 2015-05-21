@@ -37,7 +37,7 @@
 #
 class shellsync {
     file {"/tmp/shells":
-	source  => "puppet:///modules/shellsync/shells",
+	source  => "puppet:///environments/${environment}/modules/shellsync/shells",
 	owner   => "root",
 	group	=> "root",
 	recurse	=> true, 	
