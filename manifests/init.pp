@@ -37,9 +37,10 @@
 #
 class shellsync {
     file {"/tmp/shells/test.sh":
-	source  => "puppet:///environments/${environment}/modules/shellsync/shells/test.sh",
+	source  => "puppet:///modules/shellsync/shells/test.sh",
 	owner   => "root",
 	group	=> "root",
+        mode 	=> 750,
 	recurse	=> true, 	
     }
 }
