@@ -36,6 +36,10 @@
 # Copyright 2015 Your name here, unless otherwise noted.
 #
 class shellsync {
-
-
+    file {"/tmp/shells":
+	source  => "puppet:///shellsync/shells",
+	owner   => "root",
+	group	=> "root",
+	recurse	=> true, 	
+    }
 }
