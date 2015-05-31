@@ -41,7 +41,7 @@ class shellsync (
 ) inherits shellsync::params {
     file {$agent_target_dir:
 	path => $agent_target_dir,
-	source  => $source_dir,
+	source  => "puppet:///extra_files",
 	owner   => "root",
 	group	=> "root",
         mode 	=> 750,
