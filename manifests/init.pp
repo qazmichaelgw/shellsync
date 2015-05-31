@@ -36,7 +36,6 @@
 # Copyright 2015 Your name here, unless otherwise noted.
 #
 class shellsync (
-	$source_dir = $shellsync::params::source_dir,
 	$agent_target_dir = $shellsync::params::agent_target_dir
 ) inherits shellsync::params {
     file {$agent_target_dir:
