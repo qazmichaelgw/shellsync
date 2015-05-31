@@ -35,9 +35,12 @@
 #
 # Copyright 2015 Your name here, unless otherwise noted.
 #
-class shellsync {
-    file {"/tmp/shells/":
-	source  => "puppet:///modules/shellsync/",
+class shellsync (
+	$source_dir = shellsync::params::source_dir,
+	$agent_target_dir = shellsync::params::agent_target_dir
+){
+    file {$agent_target_dir:
+	source  => $source_dir,
 	owner   => "root",
 	group	=> "root",
         mode 	=> 750,
